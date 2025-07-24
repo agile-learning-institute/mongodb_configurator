@@ -1,0 +1,60 @@
+# docker-compose.yaml for stage0_mongodb_api testing
+
+services:
+  ##################################
+  # MongoDB Backing Service
+  ##################################
+  mongodb:
+    image: mongo:7.0.5
+    ports:
+      - 27017:27017
+    extra_hosts:
+      - "mongodb:127.0.0.1"
+    healthcheck:
+      test: echo "db.runCommand('ping')" | mongosh --port 27017 --quiet
+      interval: 5s
+      timeout: 30s
+      start_period: 0s
+      retries: 3
+    command: ["--bind_ip_all", "--port", "27017"]
+    profiles:
+      - mongodb
+      - configurator
+      - configurator-api
+
+  ##################################
+  # MongoDB configuration Service
+  ##################################
+  configurator_api:
+    image: ghcr.io/agile-learning-institute/mongodb_configurator_api:latest
+    restart: no
+    ports:
+      - 8081:8081
+    environment:
+      MONGO_CONNECTION_STRING: mongodb://mongodb:27017/
+      AUTO_PROCESS: False
+      LOAD_TEST_DATA: True
+      MONGO_DB_NAME: test_database
+      API_PORT: 8081
+      SPA_PORT: 8082
+    volumes:
+      - ${INPUT_FOLDER:-./tests/playground}:/input
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    profiles:
+      - configurator-api
+      - configurator
+
+  configurator_spa:
+    image: ghcr.io/agile-learning-institute/mongodb_configurator_spa:latest
+    ports:
+      - 8082:8082
+    environment:
+      API_HOST: configurator_api
+      API_PORT: 8081
+      SPA_PORT: 8082
+    depends_on:
+      - configurator_api
+    profiles:
+      - configurator
