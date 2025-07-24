@@ -8,7 +8,8 @@ The MongDB Configurator is a utility for creating and managing Versioned MongoDB
 - [Docker Desktop](https://docs.docker.com/get-started/get-docker/) - it's free (for you)
 
 ### Run the Configurator Playground
-Download this [docker-compose file](https://github.com/agile-learning-institute/mongodb_configurator/blob/main/compose_files/playground/docker-compose.yaml) and make a Configurator folder and save that file there.
+- Create a ``Configurator`` folder on your computer
+- Use the download-raw icon to save this [docker-compose file](https://github.com/agile-learning-institute/mongodb_configurator/blob/main/compose_files/playground/docker-compose.yaml) and place it in that folder.
 
 Open a terminal window and navigate to that folder, and run this command
 ```bash
@@ -38,6 +39,10 @@ flowchart LR
 
     CFG <--> API --> MongoDB
     SPA <--> API
+
+    click CFG href "https://github.com/agile-learning-institute/mongodb_configurator_template"
+    click API href "https://github.com/agile-learning-institute/mongodb_configurator_api"
+    click SPA href "https://github.com/agile-learning-institute/mongodb_configurator_spa"
 ```
 
 ## Packaging
