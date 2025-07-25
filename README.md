@@ -1,4 +1,4 @@
-# The MongoDB Configurator
+# MongoDB Configurator
 
 The MongDB Configurator is a utility for creating and managing Versioned MongoDB Configurations, specifically schema validation, indexing, and version migrations when needed. The configurator provides a containerized packaging of database configurations, and a web application that makes it easy to create and test those configurations. 
 
