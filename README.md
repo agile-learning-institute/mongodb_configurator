@@ -6,21 +6,28 @@ The MongDB Configurator is a utility for creating and managing Versioned MongoDB
 
 ### Prerequisites
 - [Docker Desktop](https://docs.docker.com/get-started/get-docker/) - it's free (for you)
+- [Mongo Compass](https://www.mongodb.com/try/download/compass) - Optional
+  - Playground connection string: ``mongodb://localhost:27017/``
 
 ### Run the Configurator Playground
-Create a ``Configurator`` folder and download this [docker-compose](./docker-compose.yaml) file there. Use this command to start the service
+Use the commands below to download this [docker-compose](./docker-compose.yaml) and run the Configurator. 
 ```bash
+mkdir Configurator
+cd Configurator
+curl https://raw.githubusercontent.com/agile-learning-institute/mongodb_configurator/refs/heads/main/docker-compose.yaml > docker-compose.yaml
 docker compose up -d
 ```
-Then visit http://localhost:8082 to access the Configurator. When you are done playing, you can use 
+Then visit http://localhost:8082 to access the Configurator. 
+
+### Shutodwn
+When you are done playing, you can use this command to shut down the service.
 ```bash
 docker compose down
 ```
-to shut down the containers. 
 
 **Note**: Shutting down the service will reset the playground to it's starting state. If you want to save all the files you have created in the playground, see [the API Explorer](http://localhost:8081/docs/index.html) for information on API commands you can use to get the documents. 
 
-Better yet, if you think you will want to save your configuration, then create your own configuration repository by creating a new GitHub repository using [This Template Repo](https://github.com/agile-learning-institute/mongodb_configurator_template) and follow the instructions in the readme.
+If you think you will want to save your configuration, you should create your own configuration repository by creating a new GitHub repo using [this Template](https://github.com/agile-learning-institute/mongodb_configurator_template).
 
 ## Configurator Components
 ```mermaid
