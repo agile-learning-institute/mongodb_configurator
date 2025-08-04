@@ -14,7 +14,7 @@ Use the commands below to download this [docker-compose](./docker-compose.yaml) 
 ```bash
 mkdir Configurator
 cd Configurator
-curl https://raw.githubusercontent.com/agile-learning-institute/mongodb_configurator/refs/heads/main/docker-compose.yaml > docker-compose.yaml
+curl https://raw.githubusercontent.com/agile-learning-institute/mongodb_configurator/refs/heads/main/docker-compose.yaml -o docker-compose.yaml
 docker compose up -d
 ```
 Then visit http://localhost:8082 to access the Configurator. 
