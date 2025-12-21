@@ -26,7 +26,7 @@ flowchart LR
 If you think you will want to save your configurations, you should create your own configuration repository by creating a new GitHub repo using [this Template](https://github.com/agile-learning-institute/mongodb_configurator_template), and follow the getting started there.
 
 ### Prerequisites
-- [Docker Desktop](https://docs.docker.com/get-started/get-docker/) - it's free (for you)
+- [Docker Desktop](https://docs.docker.com/get-started/get-docker/) - it's free (for personal use)
 - [MongoDB Compass](https://www.mongodb.com/try/download/compass) - Optional
   - Playground connection string: `mongodb://localhost:27017/`
 
