@@ -13,7 +13,6 @@ The containers have a playground configuration that allows users to experiment w
 - **mongodb**: Simple MongoDB instance
 - **configurator_spa**: WebUI service
 - **configurator_api** with:
-    - `INPUT_FOLDER=/playground`
     - `AUTO_PROCESS=false`
     - `EXIT_AFTER_PROCESSING=false`
     - `LOAD_TEST_DATA=true`
