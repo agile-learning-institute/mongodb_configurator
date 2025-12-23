@@ -24,6 +24,7 @@ services:
       - 8081:8081
     environment:
       ENABLE_DROP_DATABASE: True
+      MONGODB_REQUIRE_TLS: False
     depends_on:
       mongodb:
         condition: service_healthy
