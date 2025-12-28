@@ -59,4 +59,6 @@ docker compose pull
 
 The playground service needs ports 27017, 8081, and 8082 to be available. 
 
+### Support Community 
+Feel free to open an issue and request a review on any of the repo's. You can find suppot on Discord in [this channel](https://discord.gg/VvBe6BrCbb) on the Agile Learning Institute's server.
 
