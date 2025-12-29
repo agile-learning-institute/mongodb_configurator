@@ -1,6 +1,6 @@
 # MongoDB Configurator
 
-The MongoDB Configurator is a utility for creating and managing versioned MongoDB configurations, specifically schema validation, indexing, and version migrations when needed. The configurator provides a containerized packaging of database configurations, and a web application that makes it easy to create and test those configurations. 
+The MongoDB Configurator is a utility for creating and managing versioned MongoDB configurations, specifically schema validation, indexing. As a data engineer working with MongoDB across multiple use cases, from backing APIs in various languages to automated data ingestion pipelines and change data capture solutions, you need centralized data quality constraints that go beyond domain-specific tools like ODMs. The Configurator helps you define data quality constraints using a simplified schema approach that configures MongoDB Schema Validation, test your configurations locally, then package them for independent deployment. See the Configurator [SRE Guide](./SRE.md) for deployment details. 
 
 ```mermaid
 flowchart LR
