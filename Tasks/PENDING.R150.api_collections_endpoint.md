@@ -52,7 +52,7 @@ Before marking this task as completed:
 ## Dependencies / Ordering
 
 - Should run **after**: None
-- Should run **before**: R200 (SPA refactor) – recommended but not strictly required; SPA can derive this client-side if needed
+- Should run **before**: R200b (Collections and Dictionaries list) – **required**
 
 ## Implementation notes (to be updated by the agent)
 

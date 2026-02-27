@@ -107,11 +107,16 @@ For a complete example of a well‑formed `Run as needed` task (including contex
 For the SPA refactor to a dictionary-first UI:
 
 - **R100** – Add `json_schema/latest` API endpoint (optional dependency)
-- **R150** – Add `GET /api/collections/` API endpoint (recommended before R200)
-- **R160** – Extend `create_collection` to create config + dictionary + test_data; add overridable default dictionary template (required before R200)
-- **R200** – SPA refactor (navigation, card layout, picker enhancements, theme)
+- **R150** – Add `GET /api/collections/` API endpoint (required before R200b)
+- **R160** – Extend `create_collection` to create config + dictionary + test_data; add overridable default dictionary template (required before R200c)
+- **R200a** – Theme and navigation shell (Dictionaries + Types only)
+- **R200b** – Collections API and Dictionaries list (card grid)
+- **R200c** – New Collection dialog (simplified, R160 API)
+- **R200d** – Types list and Configuration flow
+- **R200e** – Test Data and Migrations access
+- **R200f** – Pickers and full Cypress
 
-R160 is required for the New Collection dialog. R150 simplifies the Dictionaries list; R200 can proceed without it using client-side derivation.
+R160 is required for R200c. R150 is required for R200b.
 
 ---
 
