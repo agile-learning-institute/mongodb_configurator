@@ -1,6 +1,6 @@
 # R100 – Add get jsonschema/latest api endpoint.
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Feature
 **Run Mode**: Sequential
 
@@ -52,3 +52,9 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+- Added `Configuration.get_latest_version()` to return the version with highest version number
+- Added `Configuration.get_json_schema_latest()` to return JSON schema for latest version
+- Added route `GET /api/configurations/json_schema/<file_name>/latest/` (before the versioned route)
+- Updated openapi.yaml with new endpoint
+- Added unit tests for route and service
+- Added StepCI test for json_schema latest in configurations.yaml

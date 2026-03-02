@@ -1,6 +1,6 @@
 # R200d – Types List and Configuration Flow
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Refactor / Feature
 **Run Mode**: Sequential
 
@@ -73,3 +73,10 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+- Created TypeCard.vue with type name, description, version pill; card clickable for Open; gear icon for config (if applicable)
+- Refactored TypesPage.vue to card grid layout; uses GET /api/types/ with root.description
+- Removed ConfigurationsPage, MigrationsPage, TestDataPage, EnumeratorsPage list pages
+- Redirects: /configurations, /migrations, /test_data → /dictionaries; /enumerators → /enumerators/enumerations.0.yaml (or latest)
+- Added Enumerators link to nav drawer (useLatestEnumerator)
+- Configure Database and Drop Database moved to Configuration detail page
+- Configuration, Test Data, Migration, Enumerator detail pages: back/cancel → /dictionaries

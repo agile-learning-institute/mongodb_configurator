@@ -1,6 +1,6 @@
 # R200e – Test Data and Migrations Access
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Refactor
 **Run Mode**: Sequential
 
@@ -59,3 +59,8 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+- Removed Enumerators from nav (AppLayout). Enumerators now accessed only via "Open enumerators" link in EnumPicker (to be added in R200f).
+- Test Data and Migrations: routes already redirect /test_data and /migrations lists to /dictionaries (R200d). Detail pages reachable from Configuration detail via chips (test-data-file-chip, etc.).
+- Updated test_data.cy.ts: uses createCollectionWithTestData helper, visits /test_data/{fileName} directly (file created via R160 API).
+- Updated migrations.cy.ts: creates migration via API, visits /migrations/{fileName} directly.
+- Updated enumerators.cy.ts: removed list-page expectations; /enumerators redirects to detail; tests use direct URL to enumerations.3.yaml.

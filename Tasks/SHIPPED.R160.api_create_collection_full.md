@@ -1,6 +1,6 @@
 # R160 – Extend create_collection API to create config, dictionary, and test_data
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Feature
 **Run Mode**: Sequential
 
@@ -76,3 +76,9 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+- TemplateService.create_collection now creates config, dictionary, and test_data (version 1.0.0.0)
+- Added configurator/templates/default_new_dictionary.yaml (built-in template)
+- Override path: {INPUT_FOLDER}/api_config/templates/default_new_dictionary.yaml
+- Placeholders {{collection_name}}, {{description}} in template
+- Configuration route accepts optional description in request body
+- Updated openapi, README (extender docs), unit tests

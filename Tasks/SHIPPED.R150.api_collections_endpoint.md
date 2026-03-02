@@ -1,6 +1,6 @@
 # R150 – Add GET /api/collections/ endpoint (API)
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Feature
 **Run Mode**: Sequential
 
@@ -57,3 +57,8 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+- Added Configuration.get_collections_summary() returning collection_name, configuration_file, latest_dictionary_file, latest_version, _locked
+- Created collection_routes.py with GET /api/collections/
+- Registered blueprint in server.py
+- Updated openapi.yaml
+- Added unit tests and stepci collections.yaml

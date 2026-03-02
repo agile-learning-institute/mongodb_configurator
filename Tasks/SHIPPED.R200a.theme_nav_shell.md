@@ -1,6 +1,6 @@
 # R200a – Theme and Navigation Shell
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Refactor
 **Run Mode**: Sequential
 
@@ -64,3 +64,6 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+- vuetify.ts: Switched theme from green to neutral blue (primary #1565C0, surface #E3F2FD, etc.)
+- AppLayout.vue: Nav items reduced to Dictionaries and Types only; removed Configure Database and Drop Database buttons from app bar; removed process/drop handlers and dialog; updated app-header gradient to blue; fallback help route to /dictionaries
+- event-viewer.cy.ts, app.help.cy.ts: Updated to use configure-collection-btn from Configuration detail page instead of process-all-btn

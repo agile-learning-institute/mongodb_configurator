@@ -1,6 +1,6 @@
 # R200b – Collections API and Dictionaries List
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Refactor / Feature
 **Run Mode**: Sequential
 
@@ -69,3 +69,9 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+
+- Added `useCollections` composable (`mongodb_configurator_spa/src/composables/useCollections.ts`) calling `GET /api/collections/` (R150). Returns `CollectionSummary[]` with `collection_name`, `configuration_file`, `latest_dictionary_file`, `latest_version`, `description`.
+- Added `apiService.getCollections()` in `api.ts` calling `API_ENDPOINTS.COLLECTIONS`.
+- Created `CollectionCard.vue` with collection name, description (optional), version chip (bottom-left), gear icon for Open Configuration (bottom-right). Entire card clickable for Open Dictionary. Rounded corners, shadow, responsive.
+- Refactored `DictionariesPage.vue` to card grid layout using `v-row`/`v-col` (responsive: cols 12/6/4/3). Uses `useCollections`, `CollectionCard`, `NewCollectionDialog`. "New Dictionary" button. Loading, error, empty states.
+- Cypress `dictionaries.cy.ts` updated for card layout (`data-test="collection-card-*"`, `collection-card-name-*`, etc.).

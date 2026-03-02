@@ -1,6 +1,6 @@
 # R200c – New Collection Dialog
 
-**Status**: Pending
+**Status**: Shipped
 **Task Type**: Refactor
 **Run Mode**: Sequential
 
@@ -61,3 +61,8 @@ Before marking this task as completed:
 ## Implementation notes (to be updated by the agent)
 
 **Summary of changes**
+
+- Simplified `NewCollectionDialog.vue`: removed version UI (Major/Minor/Patch controls, increment buttons, version preview). Dialog now has Collection Name and Description only.
+- Uses R160 API: `apiService.createNewCollection(name, description)` calls `POST /api/configurations/collection/{name}` with `{ description }` body. API creates config, dictionary, and test_data at 1.0.0.0.
+- Renamed dialog title to "Create New Dictionary". Validation: name must start with letter, alphanumeric + underscores.
+- `cypress/e2e/configurations.cy.ts` updated: removed version control assertions; tests simplified dialog (name + description); uses `.find('input').type()` for Vuetify text fields.
