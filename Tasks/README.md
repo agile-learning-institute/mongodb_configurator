@@ -102,25 +102,6 @@ For a complete example of a well‑formed `Run as needed` task (including contex
 - **Run as needed task**:
   - The long‑running agent should **not** include these tasks in its default sequential run; they are to be invoked manually when appropriate.
 
-### Current task pipeline (Dictionary-first refactor)
-
-For the SPA refactor to a dictionary-first UI:
-
-- **R100** – Add `json_schema/latest` API endpoint — **Shipped**
-- **R150** – Add `GET /api/collections/` API endpoint — **Shipped**
-- **R160** – Extend `create_collection` to create config + dictionary + test_data — **Shipped**
-- **R200a** – Theme and navigation shell (Dictionaries + Types only) — **Shipped**
-- **R200b** – Collections API and Dictionaries list (card grid) — **Shipped**
-- **R200c** – New Collection dialog (simplified, R160 API) — **Shipped**
-- **R200d** – Types list and Configuration flow — **Shipped** (Types card grid; Configurations/Migrations/Test Data list pages removed; Enumerators nav link)
-- **R210** – API: Simplify list dictionaries and list types endpoints — **Shipped**
-- **R200b2** – Review and refactor list-card pages (Dictionaries + Types) — **Shipped**
-- **R200e** – Test Data and Migrations access — **Shipped**
-- **R200f** – Pickers and full Cypress — **Shipped**
-- **R211** – API: Deprecate list configurations, migrations, test data endpoints — **Shipped**
-
-R160 is required for R200c. R150 is required for R200b. **R210 must run before R200e** (and before R200b2).
-
 ---
 
 With this structure, an agent (orchestrator or task executor) can:
