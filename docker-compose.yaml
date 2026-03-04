@@ -25,6 +25,7 @@ services:
     environment:
       ENABLE_DROP_DATABASE: True
       MONGODB_REQUIRE_TLS: False
+      UI_HEADER: "Schemas Playground"
     depends_on:
       mongodb:
         condition: service_healthy

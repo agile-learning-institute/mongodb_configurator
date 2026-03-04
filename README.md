@@ -16,7 +16,7 @@ flowchart LR
     CFG <--> API --> MongoDB
     SPA <--> API
 
-    click CFG href "https://github.com/agile-learning-institute/mongodb_configurator_template"
+    click CFG href "https://github.com/agile-learning-institute/stage0_template_configurator_api"
     click API href "https://github.com/agile-learning-institute/mongodb_configurator_api"
     click SPA href "https://github.com/agile-learning-institute/mongodb_configurator_spa"
 ```
